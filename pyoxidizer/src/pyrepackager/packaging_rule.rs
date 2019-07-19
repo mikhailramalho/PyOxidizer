@@ -859,8 +859,6 @@ fn resolve_pip_install_simple(
         "install".to_string(),
         "--target".to_string(),
         target_dir_s,
-        "--no-binary".to_string(),
-        ":all:".to_string(),
         rule.package.clone(),
     ]);
 
@@ -996,8 +994,6 @@ fn resolve_pip_requirements_file(
         "install",
         "--target",
         &target_dir_s,
-        "--no-binary",
-        ":all:",
         "--requirement",
         &rule.requirements_path,
     ]);
